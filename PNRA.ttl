@@ -1,0 +1,46 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix saporg: <https://w3id.org/cnr-ismar/sap/organization/1.0.0/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix orgreg: <https://w3id.org/cnr-ismar/organizations-registry/> .
+
+# Organization registry record
+# Profile version: 1.0.0
+
+orgreg:PNRA.ttl
+    rdfs:seeAlso saporg:profile.ttl ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+    dcterms:creator orcid:0009-0000-9657-919X ;
+    dcat:contactPoint [
+        a vcard:Individual ;
+        vcard:fn "Federico Bellati" ;
+        vcard:hasEmail <mailto:federico.bellati@cnr.it>
+    ] ;
+    dcterms:publisher [
+        a prov:Agent, prov:Organization, foaf:Organization ;
+        foaf:name "Istituto di Scienze Marine del Consiglio Nazionale delle Ricerche" ;
+        owl:sameAs <https://ror.org/02hdf6119>
+    ] ;
+    dcterms:rights "The licence (dcterms:license) applies to this metadata record only; "@en ;
+    dcterms:accessRights <http://publications.europa.eu/resource/authority/access-right/PUBLIC> ;
+    dcat:version "1.0.0" ;
+    # The date and time this organization instance document was created
+    dcterms:created "2026-11-12T20:55:02+00:00"^^xsd:dateTime ;
+    # The date and time this organization instance document was last modified
+    dcterms:modified "2026-11-12T20:59:10Z"^^xsd:dateTime ;
+    dcterms:conformsTo saporg: .
+
+orgreg:PNRA
+    a org:Organization ;
+    dcterms:title "PNRA"@en ;
+    dcterms:description "Italy's national Antarctic research programme, funded by the Ministry of Universities and Research. CNR coordinates scientific research, ENEA implements Antarctic expeditions, and OGS manages the research icebreaker Laura Bassi."@en ;
+    foaf:depiction <https://www.pnra.aq/sites/default/files/logo-membri/PNRA_logo.png> ;
+    foaf:homepage <https://www.pnra.aq/> .
